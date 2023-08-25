@@ -1,26 +1,23 @@
 #!/usr/bin/python3
+"""Basic Cache implementation Class
 """
-Module 0-basic_cache
-"""
-from base_caching import BaseCaching
+BaseCaching = __import__('base_caching').BaseCaching
+
 
 class BasicCache(BaseCaching):
     """
-    Overrides put() and get()
-    from parent
-    """
+    A basic cache implementaion class
 
+    Attributes:
+        MAX_ITEMS: number of items that can be store in the cache
+    """
     def put(self, key, item):
-        """Add an item in the cache
+        """ Add an item in the cache
         """
-        if key and item:
-            if len(self.cache_data) >= self.MAX_ITEMS:
-                # If cache is full, remove the oldest item
-                oldest_key = next(iter(self.cache_data))
-                del self.cache_data[oldest_key]
-            self.cache_data[key] = item
+        if key is not None and item is not None:
+            self.cache_data.update({key: item})
 
     def get(self, key):
-        """Get an item by key
+        """ Get an item by key
         """
-        return self.cache_data.get(key)
+        return self.cache_data.get(key, None)
