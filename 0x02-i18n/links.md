@@ -1,0 +1,3 @@
+- https://flask-babel.tkte.ch/
+- https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xiii-i18n-and-l10n
+- https://pytz.sourceforge.net/
