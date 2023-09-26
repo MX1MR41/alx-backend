@@ -1,0 +1,4 @@
+- https://redis.io/docs/getting-started/
+- https://redis.io/docs/ui/cli/
+- https://github.com/redis/node-redis
+- https://github.com/Automattic/kue
